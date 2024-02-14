@@ -64,13 +64,13 @@ class _MemberAddasState extends State<MemberAddas> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                GameDetails,
+                AddaDetails,
                 const SizedBox(width: 10),
-                GameDetails,
+                AddaDetails,
                 const SizedBox(width: 10),
-                GameDetails,
+                AddaDetails,
                 const SizedBox(width: 10),
-                GameDetails,
+                AddaDetails,
               ],
             ),
           ),
@@ -80,7 +80,7 @@ class _MemberAddasState extends State<MemberAddas> {
   }
 }
 
-final GameDetails = Container(
+final AddaDetails = Container(
   child: SizedBox(
     width: 250,
     height: 280,

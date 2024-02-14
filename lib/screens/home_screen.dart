@@ -5,7 +5,6 @@ import 'package:vyld/sections/friends_section.dart';
 import 'package:vyld/sections/member_section.dart';
 import 'package:vyld/sections/ongoing_section.dart';
 import 'package:vyld/screens/search_screen.dart';
-import 'package:vyld/screens/splash_screen.dart';
 import 'package:vyld/sections/suggested_section.dart';
 
 class HomeScreen extends StatefulWidget {

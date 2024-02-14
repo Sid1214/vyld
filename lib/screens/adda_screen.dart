@@ -98,65 +98,80 @@ class AddaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: const Color.fromARGB(255, 235, 206, 244),
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  adda.name,
-                  style: const TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+    return Container(
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: const Color.fromARGB(255, 235, 206, 244),
+      ),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                adda.name,
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
-                  adda.description,
-                  style: const TextStyle(fontSize: 14.0),
-                ),
-                const SizedBox(height: 8.0),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.person,
-                      color: Color.fromARGB(255, 95, 92, 92),
-                    ),
-                    Text(
-                      ' ${adda.membernumber}',
-                      style: const TextStyle(fontSize: 16.0),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            const Spacer(),
-            Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              color: const Color.fromARGB(255, 57, 56, 56),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
               ),
-              // margin: const EdgeInsets.all(10),
-              child: Column(
+              Text(
+                adda.description,
+                style: const TextStyle(fontSize: 14.0),
+              ),
+              const SizedBox(height: 8.0),
+              Row(
                 children: [
-                  SizedBox(
-                      width: 100,
-                      height: 90,
-                      child: Image.asset(
-                        "assets/mario.jpg",
-                        fit: BoxFit.fill,
-                      )),
+                  const Icon(
+                    Icons.person,
+                    color: Color.fromARGB(255, 95, 92, 92),
+                  ),
+                  Text(
+                    ' ${adda.membernumber}',
+                    style: const TextStyle(fontSize: 16.0),
+                  ),
                 ],
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+          const SizedBox(width: 30),
+          // const Spacer(),
+          // Card(
+          //   clipBehavior: Clip.antiAliasWithSaveLayer,
+          //   color: const Color.fromARGB(255, 57, 56, 56),
+          //   shape: RoundedRectangleBorder(
+          //     borderRadius: BorderRadius.circular(20.0),
+          //   ),
+          //   // margin: const EdgeInsets.all(10),
+          //   child:
+          Container(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            width: 150,
+            height: 400,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: const DecorationImage(
+                    image: AssetImage("assets/mario.jpg"), fit: BoxFit.fill)),
+            // child: Column(
+            //   crossAxisAlignment: CrossAxisAlignment.end,
+            //   children: [
+            //     SizedBox(
+            //         width: 100,
+            //         height: 100,
+            //         child: Image.asset(
+            //           "assets/mario.jpg",
+            //           fit: BoxFit.fill,
+            //         )),
+            //   ],
+            // ),
+          ),
+          //),
+        ],
       ),
     );
   }

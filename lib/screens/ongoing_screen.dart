@@ -17,7 +17,7 @@ class GamePage extends StatelessWidget {
     Game(
         name: 'Game 1', description: 'Description of Game 1', status: 'Active'),
     Game(
-        name: 'Game 2',
+        name: 'call of duty cod',
         description: 'Description of Game 2',
         status: 'Inactive'),
     Game(

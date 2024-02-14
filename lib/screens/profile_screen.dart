@@ -111,7 +111,6 @@ class ProfileBody extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              // SizedBox(height: 10),
               Text(
                 '123 Main Street, Cityville, State, Zipcode',
                 style: TextStyle(

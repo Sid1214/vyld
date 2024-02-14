@@ -72,12 +72,12 @@ class _OngoingGamesState extends State<OngoingGames> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(width: 140, child: GameDetails),
+                const SizedBox(width: 5),
                 GameDetails,
-                const SizedBox(width: 10),
+                const SizedBox(width: 5),
                 GameDetails,
-                const SizedBox(width: 10),
-                GameDetails,
-                const SizedBox(width: 10),
+                const SizedBox(width: 5),
                 GameDetails,
               ],
             ),
@@ -89,7 +89,7 @@ class _OngoingGamesState extends State<OngoingGames> {
 }
 
 final GameDetails = Column(
-  mainAxisAlignment: MainAxisAlignment.center,
+  // mainAxisAlignment: MainAxisAlignment.center,
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
     ClipRRect(
@@ -103,14 +103,15 @@ final GameDetails = Column(
     ),
     // const SizedBox(height: 5),
     const Text(
-      "Game Name",
+      "Game Name Call of Duty",
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
           color: Colors.white, fontSize: 14, fontWeight: FontWeight.w800),
     ),
     const SizedBox(height: 5),
     const Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Icon(Icons.home_filled, color: Colors.grey, size: 20),
         SizedBox(width: 5),
