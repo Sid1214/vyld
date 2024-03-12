@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vyld/screens/group_chatscreen.dart';
+import 'package:vyld/screens/groupchat.dart';
 import 'package:vyld/screens/profile_screen.dart';
 import 'package:vyld/sections/connect_section.dart';
 import 'package:vyld/sections/friends_section.dart';
@@ -60,6 +62,27 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.white),
                     ),
                     const Spacer(),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const GroupChat()));
+                      },
+                      child: Container(
+                        width: 46,
+                        height: 46,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromARGB(255, 248, 216, 100),
+                        ),
+                        child: const Icon(
+                          Icons.groups_2,
+                          size: 27,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 20),
                     InkWell(
                       onTap: () {
                         Navigator.push(
